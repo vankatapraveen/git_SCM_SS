@@ -1,15 +1,11 @@
-pipeline
-{
-agent any
-{
-stages
-{
-stage ("Git Checkut")
-{
-steps
-{
-git credentailsId:'github',url:'https://github.com/vankatapraveen/git_SCM_SS.git'
+pipeline {
+    agent any
+    stages {
+        stage("Git Checkout") {
+            steps {
+                git credentialsId: 'github', url: 'https://github.com/vankatapraveen/git_SCM_SS.git'
+            }
+        }
+    }
 }
-}
-}
-}}
+
